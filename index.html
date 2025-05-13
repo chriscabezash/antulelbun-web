@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporación Cultural Antulelbún - Pucón, Chile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #426A5A;
+            --secondary-color: #8BB174;
+            --text-color: #333333;
+            --light-bg: #F7F7F2;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .logo {
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Navigation */
+        nav {
+            width: 100%;
+            background-color: var(--primary-color);
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .content-section {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        
+        .content-section ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .content-section li {
+            margin-bottom: 10px;
+        }
+        
+        .organigrama {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+            max-width: 150px;
+        }
+        
+        .footer-info {
+            margin-bottom: 20px;
+        }
+        
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .social-media a {
+            color: var(--white);
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-media a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <!-- Placeholder for logo, to be replaced with actual logo -->
+                    <img src="logo.png" alt="Logo Corporación Cultural Antulelbún">
+                </div>
+                <h1>CORPORACIÓN CULTURAL ANTULELBÚN</h1>
+                <p>PUCÓN - CHILE</p>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#quienes-somos">Quienes Somos</a></li>
+                <li><a href="#lineas-trabajo">Líneas de Trabajo</a></li>
+                <li><a href="#acciones">Acciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="banner">
+        <!-- Banner image will be set as background image -->
+        <div class="container">
+            <h2>Promoviendo la cultura y las artes en el territorio lacustre andino</h2>
+        </div>
+    </div>
+    
+    <main>
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-section" id="quienes-somos">
+                    <h2>Quienes Somos</h2>
+                    <p>Somos una ONG o corporación cultural sin fines de lucro, fundada en 2023 por la poeta Norka Sepúlveda para el desarrollo de la cultura y las artes. El órgano colectivo principal de la Corporación es su Asamblea General de Socios.</p>
+                    
+                    <h3>Nuestra Asamblea General está conformado por:</h3>
+                    <ul>
+                        <li>Carlos Gray Aguirre -- Presidente Directorio y Representante Legal</li>
+                        <li>Armando Zapata Silva -- Tesorero Directorio</li>
+                        <li>Graciela Guajardo Hernández -- Secretaria Directorio</li>
+                        <li>María Cristina Hurtado Guzmán</li>
+                        <li>Tomás Alejandro Billike Brancoli</li>
+                    </ul>
+                    
+                    <h3>Organigrama</h3>
+                    <img src="organigrama.png" alt="Organigrama de la Corporación" class="organigrama">
+                    
+                    <h3>Misión</h3>
+                    <p>La Corporación Cultural Antulelbún tiene como misión fomentar el desarrollo cultural y artístico en Pucón, promoviendo la inclusión y la sostenibilidad. A través de espacios de formación, difusión y colaboración, impulsa la expresión creativa, la conservación del patrimonio y la diversidad cultural. Comprometida con el acceso equitativo, conecta artistas, gestores y comunidades, integrando nuevos talentos y fortaleciendo identidades locales. Desde la innovación y la transferencia tecnológica, articula proyectos que potencian la producción cultural y las redes de intercambio. Así, se consolida como un motor del ecosistema artístico, contribuyendo al bienestar social y a una cultura accesible y diversa.</p>
+                    
+                    <h3>Visión</h3>
+                    <p>La Corporación Cultural Antulelbún proyecta su visión desde el territorio lacustre andino, preservando y promoviendo su riqueza cultural única. Impulsa un ecosistema artístico dinámico que fortalece la identidad de la zona lacustre andina de la región de La Araucanía, fomentando el diálogo intercultural y la sostenibilidad. A través de la creatividad, la innovación y la transferencia tecnológica, conecta el arte y la cultura del territorio con redes nacionales e internacionales, dando visibilidad a las expresiones locales. Con un enfoque inclusivo y equitativo, busca consolidar su papel como referente en la producción cultural, garantizando la accesibilidad y el impacto social de sus iniciativas.</p>
+                </div>
+                
+                <div class="content-section" id="lineas-trabajo">
+                    <h2>Líneas de Trabajo</h2>
+                    <h3>1. Fortalecimiento de ecosistemas culturales y creativos</h3>
+                    <p>Impulsar la articulación de agentes culturales del territorio mediante el desarrollo de un mapeo cultural participativo y encuentros estratégicos que fomenten la economía creativa en el territorio. Este proceso busca reconocer y potenciar el aporte de los actores culturales en la sostenibilidad del territorio, promoviendo su integración en redes nacionales e internacionales.</p>
+                    
+                    <h3>2. Capacitación y desarrollo profesional para la diversidad cultural</h3>
+                    <p>Implementar un espacio colaborativo de formación y capacitación destinado a agentes culturales del territorio lacustre andino de la región de La Araucanía, con un enfoque inclusivo y sostenible. Se priorizarán metodologías innovadoras, el acceso equitativo a conocimientos y la integración de herramientas tecnológicas para fortalecer la gestión cultural y la participación activa en políticas públicas.</p>
+                    
+                    <h3>3. Acceso a la cultura y participación comunitaria</h3>
+                    <p>Desarrollar programas artístico-culturales dirigidos a comunidades vulnerables, asegurando su acceso a expresiones creativas y el derecho a la diversidad cultural. Se fomentará el trabajo voluntario y la gestión de financiamiento para garantizar la continuidad de estos proyectos, priorizando acciones que contribuyan a la inclusión social, la equidad de género y la preservación del patrimonio cultural.</p>
+                </div>
+                
+                <div class="content-section" id="acciones">
+                    <h2>Acciones</h2>
+                    <p>En esta sección se mostrarán las acciones y proyectos que realiza la Corporación Cultural Antulelbún en el territorio.</p>
+                    
+                    <div class="action-item">
+                        <h3>Próximos eventos</h3>
+                        <ul>
+                            <li>Talleres de formación artística</li>
+                            <li>Encuentros culturales comunitarios</li>
+                            <li>Exposiciones y muestras artísticas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <!-- Footer logo placeholder -->
+                    <img src="logo-footer.png" alt="Logo Corporación Cultural Antulelbún">
+                </div>
+                
+                <div class="footer-info">
+                    <p>Corporación Cultural Antulelbún</p>
+                    <p>Pucón, Chile</p>
+                    <p>Email: contacto@corporacionantulelbun.cl</p>
+                </div>
+                
+                <div class="social-media">
+                    <!-- Social media icons can be added here with appropriate links -->
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2025 Corporación Cultural Antulelbún. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
