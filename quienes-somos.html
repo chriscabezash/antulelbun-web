@@ -4,6 +4,56 @@
     <meta charset="UTF-8">
     <title>Quiénes Somos - Antulelbún</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #426A5A;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #8BB174;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        main {
+            padding: 20px;
+        }
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        h2, h3 {
+            color: #426A5A;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .team-member {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,19 +71,56 @@
     </nav>
 
     <main>
-        <section>
-            <h2>Quiénes Somos</h2>
-            <p>Somos una ONG o corporación cultural sin fines de lucro, fundada en 2023 por la poeta Norka Sepúlveda para el desarrollo de la cultura y las artes.</p>
-            <p>Nuestra Asamblea General está conformada por:</p>
-            <ul>
-                <li>Carlos Gray Aguirre – Presidente Directorio y Representante Legal</li>
-                <li>Armando Zapata Silva – Tesorero Directorio</li>
-                <li>Graciela Guajardo Hernández – Secretaria Directorio</li>
-                <li>Maria Cristina Hurtado Guzmán</li>
-                <li>Tomás Alejandro Billike Brancoli</li>
-            </ul>
-            <img src="assets/images/Foto 4_organigrama Antulelbun.jpg" alt="Organigrama" style="width: 100%; max-width: 800px;">
-        </section>
+        <div class="section-container">
+            <section>
+                <h2>Quiénes Somos</h2>
+                <p>Somos una ONG o corporación cultural sin fines de lucro, fundada en 2023 por la poeta Norka Sepúlveda para el desarrollo de la cultura y las artes. El órgano colectivo principal de la Corporación es su Asamblea General de Socios.</p>
+                <p>Nuestra Asamblea General está conformada por:</p>
+                <ul>
+                    <li>Carlos Gray Aguirre -- Presidente Directorio y Representante Legal</li>
+                    <li>Armando Zapata Silva -- Tesorero Directorio</li>
+                    <li>Graciela Guajardo Hernández -- Secretaria Directorio</li>
+                    <li>Maria Cristina Hurtado Guzmán</li>
+                    <li>Tomás Alejandro Billike Brancoli</li>
+                </ul>
+                <img src="assets/images/Foto_4_organigrama_Antulelbun.jpg" alt="Organigrama" style="max-width: 800px;">
+            </section>
+
+            <section>
+                <h3>Visión</h3>
+                <p>La Corporación Cultural Antulelbún proyecta su desarrollo desde el territorio lacustre andino, preservando su riqueza cultural y fortaleciendo la identidad local. A través de innovación, creatividad y redes de colaboración, impulsa un ecosistema artístico sostenible que conecta expresiones locales con espacios nacionales e internacionales, consolidándose como un referente de acceso y equidad en la producción cultural.</p>
+            </section>
+
+            <section>
+                <h3>Misión</h3>
+                <p>La Corporación Cultural Antulelbún impulsa el desarrollo cultural y artístico en Pucón, promoviendo inclusión, sostenibilidad e innovación. A través de formación, difusión y colaboración, fortalece la identidad local, conecta comunidades y potencia la producción creativa, consolidándose como un motor del ecosistema cultural y social.</p>
+            </section>
+
+            <section>
+                <h3>Equipo de Trabajo</h3>
+                <div class="team-member">
+                    <h4>Director:</h4>
+                    <img src="assets/images/Foto_5.jpg" alt="Carlos Gray Aguirre" style="max-width: 200px;">
+                    <p><strong>Carlos Gray Aguirre</strong><br>
+                    Actor, Escritor y Gestor Cultural con más de 30 años de trayectoria, con xxx publicaciones y director de “La Góndola del Arte”, compañía de teatro. Entre otros, recibe el “Premio a la Trayectoria Cultural de la Araucanía” por parte de la SEREMI de las Culturas, las Artes y el Patrimonio en 2022.</p>
+                </div>
+
+                <div class="team-member">
+                    <h4>Coordinadora de Estrategia y Desarrollo (Proyectos):</h4>
+                    <img src="assets/images/Foto_6.jpg" alt="Natalia Navarrete Cavieres" style="max-width: 200px;">
+                    <p><strong>Natalia Navarrete Cavieres</strong><br>
+                    Administradora Pública, Magíster en Gestión Educacional, Diplomada en Gestión de Proyectos Municipales y Diplomada en Gobiernos Locales Transformadores.<br>
+                    Diseñadora y Coordinadora General de uno de los 11 proyectos del mundo ganadores del Fondo Internacional para la Diversidad Cultural de UNESCO, versión 2022. Formuladora y coordinadora de diversos proyectos de asociatividad municipal en vinculación con las comunidades.</p>
+                </div>
+
+                <div class="team-member">
+                    <h4>Coordinadora de Medios y Comunidades:</h4>
+                    <img src="assets/images/Foto_7.jpg" alt="Daniela Navarrete Cavieres" style="max-width: 200px;">
+                    <p><strong>Daniela Navarrete Cavieres</strong><br>
+                    Fotógrafa Profesional, Gestora Cultural, Guía Educativa y Tallerista de Técnica de Cianotipia. Creadora y colaboradora de múltiples proyectos culturales comunitarios autofinanciados.</p>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
