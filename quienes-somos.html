@@ -45,13 +45,23 @@
         }
         h2, h3 {
             color: #426A5A;
+            text-align: center;
         }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
+        p {
+            text-align: justify;
         }
         .team-member {
             margin-bottom: 30px;
+            text-align: center;
+        }
+        .asamblea-members {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+        }
+        .asamblea-members div {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -76,13 +86,13 @@
                 <h2>Quiénes Somos</h2>
                 <p>Somos una ONG o corporación cultural sin fines de lucro, fundada en 2023 por la poeta Norka Sepúlveda para el desarrollo de la cultura y las artes. El órgano colectivo principal de la Corporación es su Asamblea General de Socios.</p>
                 <p>Nuestra Asamblea General está conformada por:</p>
-                <ul>
-                    <li>Carlos Gray Aguirre -- Presidente Directorio y Representante Legal</li>
-                    <li>Armando Zapata Silva -- Tesorero Directorio</li>
-                    <li>Graciela Guajardo Hernández -- Secretaria Directorio</li>
-                    <li>Maria Cristina Hurtado Guzmán</li>
-                    <li>Tomás Alejandro Billike Brancoli</li>
-                </ul>
+                <div class="asamblea-members">
+                    <div>Carlos Gray Aguirre -- Presidente Directorio y Representante Legal</div>
+                    <div>Armando Zapata Silva -- Tesorero Directorio</div>
+                    <div>Graciela Guajardo Hernández -- Secretaria Directorio</div>
+                    <div>Maria Cristina Hurtado Guzmán</div>
+                    <div>Tomás Alejandro Billike Brancoli</div>
+                </div>
                 <img src="assets/images/Foto 4_organigrama Antulelbun.jpg" alt="Organigrama" style="max-width: 800px;">
             </section>
 
