@@ -5,45 +5,116 @@
     <title>Proyectos Futuros - Corporación Cultural Antulelbún</title>
     <link rel="stylesheet" href="assets/styles.css">
     <style>
-        /* Estilos adicionales para la página de Proyectos Futuros */
-        .proyecto-futuro {
-            background-color: #f9f9f9; /* Un color de fondo suave para distinguir los contenedores */
-            border: 1px solid #eee; /* Un borde sutil */
-            border-radius: 8px; /* Bordes redondeados */
+        /* Estilos generales que podrías tener en assets/styles.css */
+        body { font-family: sans-serif; margin: 0; }
+        header { background-color: #3A5F0B; /* Color verde oscuro similar al de la imagen */ color: white; padding: 15px 0; text-align: center; }
+        header h1 { margin: 0; font-size: 1.8em; }
+        header img {
+            width: 120px; /* Ajusta este valor según el tamaño deseado para tu logo PNG */
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        nav {
+            background-color: #558B2F; /* Un verde más claro para la navegación, similar al de la imagen */
+            padding: 10px 0;
+            text-align: center;
+            display: flex; /* Usamos flexbox para mejor control */
+            flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+            justify-content: center; /* Centra los elementos de navegación */
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px; /* Reducimos un poco el padding respecto a un valor genérico */
+            font-size: 0.95em; /* Reducimos un poco la fuente si es necesario */
+            margin: 5px 5px; /* Espacio entre los botones */
+            border-radius: 4px; /* Bordes redondeados para los botones */
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #3A5F0B; /* Oscurece al pasar el mouse */
+        }
+
+        main {
             padding: 20px;
-            margin-bottom: 30px; /* Espacio entre proyectos */
-            text-align: left; /* Alineación de texto por defecto */
+        }
+        /* Estilos específicos para la página de Proyectos Futuros */
+        .proyecto-futuro {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0; /* Borde un poco más visible */
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 35px;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil */
         }
         .proyecto-futuro h3 {
-            color: #333; /* Color oscuro para el título del proyecto */
-            text-align: center; /* Título del proyecto centrado */
-            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5em; /* Tamaño de fuente para el título del proyecto */
         }
         .proyecto-futuro p {
-            color: #555; /* Color de texto ligeramente más claro */
-            line-height: 1.6; /* Espaciado de línea para mejor legibilidad */
-            margin-bottom: 10px;
+            color: #444; /* Texto un poco más oscuro para mejor contraste */
+            line-height: 1.7; /* Interlineado mejorado */
+            margin-bottom: 12px;
         }
         .proyecto-futuro .detalles-proyecto strong {
-            color: #000; /* Color más oscuro para los encabezados de detalles */
+            color: #222; /* Etiquetas de detalles más oscuras */
         }
-        /* Contenedor principal para centrar el contenido de la sección */
+        .proyecto-futuro em { /* Estilo para texto en cursiva (postulaciones) */
+            color: #555;
+            display: block;
+            margin-bottom: 15px;
+            text-align: center;
+            font-style: italic;
+        }
+        .proyecto-futuro ol {
+            padding-left: 20px; /* Espaciado para listas */
+            margin-bottom: 15px;
+        }
+        .proyecto-futuro ol li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
         .main-content-centered {
-            max-width: 900px; /* Ancho máximo del contenido */
-            margin: 0 auto; /* Centrar el contenedor */
+            max-width: 900px;
+            margin: 0 auto;
             padding: 20px;
         }
-        /* Asegurar que el título principal de la sección esté centrado */
-        main h2 {
+        main > .main-content-centered > h2 { /* Título principal "Proyectos Futuros" */
             text-align: center;
-            margin-bottom: 40px; /* Espacio debajo del título principal */
+            margin-bottom: 40px;
+            font-size: 2em; /* Tamaño de fuente para el título principal */
+            color: #3A5F0B; /* Color verde del header */
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #3A5F0B; /* Color verde para enlaces del footer */
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Corporación Cultural Antulelbún</h1>
-        <img src="assets/images/Logo.png" alt="Logo Corporación Cultural Antulelbún" style="width: 100px; display: block; margin: 0 auto;">
+        <img src="assets/images/Logo.png" alt="Logo Corporación Cultural Antulelbún">
     </header>
 
     <nav>
@@ -67,8 +138,8 @@
                 <p>Los beneficiarios son 80 habitantes de Pucón y Curarrehue (adultos mayores y sus cuidadoras).</p>
                 <p>La estrategia de intervención contempla: planificación y difusión, ejecución de talleres creativos con acompañamiento psicológico, y evaluación de resultados. Las sesiones inician con acompañamiento psicológico mediante dinámicas y ejercicios que introduzcan el trabajo artístico y la colaboración. Luego se enseñarán una serie de técnicas artísticas simples para construir los “Libros Alterados” que reunirán elementos autobiográficos. Cada grupo elaborará además un libro ficticio colectivo.</p>
                 <p class="detalles-proyecto"><strong>Estado:</strong> Postulado.</p>
-                <p class="detalles-proyecto"><strong>Resultados:</strong> julio - agosto 2025.</p>
-                <p class="detalles-proyecto"><strong>Ejecución:</strong> septiembre 2025 a abril 2026.</p>
+                <p class="detalles-proyecto"><strong>Resultados:</strong> Julio - Agosto 2025.</p>
+                <p class="detalles-proyecto"><strong>Ejecución:</strong> Septiembre 2025 a Abril 2026.</p>
             </section>
 
             <section class="proyecto-futuro">
@@ -78,8 +149,8 @@
                 <p>Las comunas de Pucón y Curarrehue, situadas en la zona lacustre andina de La Araucanía, son áreas caracterizadas por su riqueza natural, cultural y su conexión con la cultura ancestral. Sin embargo, enfrentan desafíos estructurales derivados de su ubicación geográfica, con acceso limitado a oportunidades de formación y vinculación profesional, debido a la distancia significativa con la capital regional, Temuco, y otros centros urbanos.</p>
                 <p>Según datos del Observatorio Cultural del Ministerio de las Culturas, las Artes y el Patrimonio, estas comunas cuentan con un total de 129 agentes culturales catastrados: 101 en Pucón y 28 en Curarrehue. Estos agentes desempeñan roles fundamentales en la preservación del patrimonio cultural y en la promoción de la creatividad comunitaria. No obstante, carecen de herramientas adecuadas para su profesionalización y el establecimiento de redes de colaboración.</p>
                 <p class="detalles-proyecto"><strong>Estado:</strong> Postulado.</p>
-                <p class="detalles-proyecto"><strong>Resultados:</strong> julio - agosto 2025.</p>
-                <p class="detalles-proyecto"><strong>Ejecución:</strong> agosto a noviembre 2025.</p>
+                <p class="detalles-proyecto"><strong>Resultados:</strong> Julio - Agosto 2025.</p>
+                <p class="detalles-proyecto"><strong>Ejecución:</strong> Agosto a Noviembre 2025.</p>
             </section>
 
             <section class="proyecto-futuro">
@@ -93,8 +164,8 @@
                     <li>Crear una plataforma digital de comercialización mediante el desarrollo de un sitio web interactivo para promocionar y comercializar productos y servicios culturales de los agentes culturales, que sea gestionado por las comunidades organizadas a través de la cooperativa.</li>
                 </ol>
                 <p class="detalles-proyecto"><strong>Estado:</strong> Postulado.</p>
-                <p class="detalles-proyecto"><strong>Resultados:</strong> febrero 2026.</p>
-                <p class="detalles-proyecto"><strong>Ejecución:</strong> agosto 2026 a febrero 2028.</p>
+                <p class="detalles-proyecto"><strong>Resultados:</strong> Febrero 2026.</p>
+                <p class="detalles-proyecto"><strong>Ejecución:</strong> Agosto 2026 a Febrero 2028.</p>
             </section>
         </div>
     </main>
