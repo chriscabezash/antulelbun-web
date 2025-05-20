@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Quiénes Somos - Corporación Cultural Antulelbún</title>
-    <link rel="stylesheet" href="assets/styles.css"> <style>
-        /* Estilos Generales Consistentes (similares a proyectos-futuros.html) */
+    <style>
+        /* Estilos Generales Consistentes (tomados de codigo 1 y fusionados con codigo 2) */
         body {
-            font-family: 'Montserrat', sans-serif; /* Mantengo tu elección de fuente */
+            font-family: 'Montserrat', sans-serif;
             background-color: #f7f7f2;
             color: #333;
             margin: 0;
             padding: 0;
-            line-height: 1.6; /* Interlineado base */
+            line-height: 1.6;
         }
         header {
-            background-color: #3A5F0B; /* Color verde oscuro consistente */
+            background-color: #3A5F0B;
             color: white;
             padding: 15px 0;
             text-align: center;
@@ -23,8 +23,8 @@
             margin: 0;
             font-size: 1.8em;
         }
-        header img { /* Estilo para el logo */
-            width: 120px; /* Ajusta según tu logo PNG */
+        header img.logo-img { /* Clase específica para el logo */
+            width: 120px;
             max-width: 100%;
             height: auto;
             display: block;
@@ -32,7 +32,7 @@
         }
 
         nav {
-            background-color: #558B2F; /* Verde más claro consistente para nav */
+            background-color: #558B2F;
             padding: 10px 0;
             text-align: center;
             display: flex;
@@ -51,17 +51,16 @@
         nav a:hover {
             background-color: #3A5F0B;
         }
-
+        
+        /* Estilos para el contenido principal centrado */
         main {
-            padding: 20px; /* Padding general para el main */
+            padding: 0px 20px 20px 20px; /* Ajuste para que no haya padding superior directo en main si .main-content-centered ya lo tiene */
         }
-
         .main-content-centered {
-            max-width: 900px; /* Ancho máximo del contenido principal */
-            margin: 0 auto; /* Centrado automático */
-            padding: 20px; /* Padding interno del contenedor */
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
         .main-content-centered h2, /* Título principal de la página (Quiénes Somos) */
         .main-content-centered h3, /* Subtítulos (Visión, Misión, etc.) */
         .main-content-centered h4 { /* Títulos menores (Director, etc.) */
@@ -72,71 +71,110 @@
         }
         .main-content-centered h2 { font-size: 2em; }
         .main-content-centered h3 { font-size: 1.7em; }
-        .main-content-centered h4 { font-size: 1.4em; }
+        .main-content-centered h4 { font-size: 1.4em; margin-bottom: 10px;}
 
 
+        /* Estilo para secciones de contenido (adaptado de .content-section de codigo 2) */
         .content-section {
-            background-color: #ffffff; /* Fondo blanco para las secciones de contenido */
+            background-color: #ffffff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             padding: 25px;
             margin-bottom: 30px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .content-section p,
-        .content-section ul li {
-            text-align: justify; /* Texto justificado como solicitaste */
+        .content-section p {
+            text-align: justify; 
             color: #444;
             margin-bottom: 15px;
             line-height: 1.7;
         }
+         /* Párrafo introductorio de "Quiénes Somos" y el que precede a la lista */
+        .intro-paragraph {
+            text-align: justify; /* O text-align: left; si prefieres */
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        .intro-paragraph strong { /* Para el título de la sección si se usa dentro de un p */
+             display: block;
+             text-align: center;
+             font-size: 1.2em;
+             color: #3A5F0B;
+             margin-bottom: 15px;
+        }
 
         /* Estilos para imágenes generales dentro de .content-section */
-        .content-section img,
-        .team-member img {
-            max-width: 100%; /* Hace la imagen responsiva */
-            height: auto;    /* Mantiene la proporción */
-            display: block;  /* Para poder centrar con margin */
-            margin: 20px auto; /* Centra la imagen y añade espacio vertical */
-            border-radius: 6px; /* Bordes redondeados suaves para imágenes */
+        .content-section img {
+            max-width: 100%; 
+            height: auto;   
+            display: block;  
+            margin: 20px auto; 
+            border-radius: 6px;
         }
-
-        /* Para la lista de miembros de la Asamblea */
+        
+        /* Para la lista de miembros de la Asamblea - MEJORADO */
+        .asamblea-title { /* Título antes de la lista */
+            text-align: center;
+            color: #3A5F0B; /* Color del título */
+            font-size: 1.3em;  /* Tamaño de fuente para el título de la asamblea */
+            margin-top: 20px;
+            margin-bottom: 15px; /* Espacio antes de la lista */
+            font-weight: bold;
+        }
         .asamblea-members {
-            list-style: none; /* Quita los bullets por defecto */
-            padding-left: 0; /* Quita el padding por defecto */
-            text-align: center; /* Centra el texto de los miembros */
+            list-style: none; 
+            padding-left: 0; 
+            text-align: center; /* Centra el bloque de la lista si tiene un ancho definido, pero el centrado principal es en LI */
+            margin-bottom: 20px; /* Espacio después de la lista, antes de la imagen del organigrama */
         }
         .asamblea-members li {
-            margin-bottom: 10px;
-            font-size: 1.1em;
-            color: #333;
+            margin-bottom: 12px; /* Espacio entre miembros */
+            font-size: 1.1em;   /* Tamaño de fuente legible */
+            color: #333;       /* Color de texto principal para nombres */
             text-align: center; /* Asegura que cada item esté centrado */
+            line-height: 1.5;   /* Espaciado de línea para mejor lectura */
         }
-        .asamblea-members strong { /* Para resaltar el cargo */
-            color: #222;
+        .asamblea-members li strong { /* Para resaltar el cargo */
+            color: #222;          /* Color más oscuro para el cargo */
+            display: block;        /* Hace que el cargo ocupe su propia línea o resalte más */
+            margin-bottom: 3px;   /* Pequeño espacio entre el cargo y el nombre si es block */
+            font-weight: 600;      /* Un poco más de peso para el cargo */
+        }
+         /* Si quieres el cargo y el nombre en la misma línea, pero el cargo en bloque: */
+        .asamblea-members li span.member-name {
+            display: block; /* Nombre en línea separada si el strong es block */
+            color: #444; /* Ligeramente más suave para el nombre si se desea diferenciar */
         }
 
 
-        /* Para el equipo de trabajo */
+        /* Para el equipo de trabajo (tomado de codigo 2) */
         .team-member {
-            text-align: center; /* Centra el contenido del miembro del equipo */
+            text-align: center; 
             margin-bottom: 40px;
         }
         .team-member img {
-            max-width: 200px; /* Tamaño máximo para las fotos del equipo */
-            border-radius: 50%; /* Fotos redondas para el equipo */
+            max-width: 180px; /* Tamaño ajustado para fotos del equipo */
+            border-radius: 50%; 
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 15px;
         }
         .team-member p {
-            text-align: justify; /* Párrafos de descripción justificados */
+            text-align: justify; 
             font-size: 0.95em;
+            color: #444;
         }
-        .team-member strong { /* Nombre del miembro del equipo */
+        .team-member p strong { /* Nombre del miembro del equipo */
             display: block;
             font-size: 1.2em;
             color: #333;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            text-align: center; /* Centrar el nombre */
+        }
+        .team-member h4 { /* Cargo del miembro del equipo */
+             margin-bottom: 15px;
+             font-size: 1.3em;
         }
 
 
@@ -155,13 +193,12 @@
         footer a:hover {
             text-decoration: underline;
         }
-
     </style>
 </head>
 <body>
     <header>
         <h1>Corporación Cultural Antulelbún</h1>
-        <img src="assets/images/Logo_B.jpg" alt="Logo Corporación Cultural Antulelbún">
+        <img src="assets/images/Logo.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
     </header>
 
     <nav>
@@ -178,15 +215,14 @@
             <h2>Quiénes Somos</h2>
 
             <section class="content-section">
-                <p>Somos una ONG o corporación cultural sin fines de lucro, fundada en 2023 por la poeta Norka Sepúlveda para el desarrollo de la cultura y las artes. El órgano colectivo principal de la Corporación es su Asamblea General de Socios.</p>
-                <p>Nuestra Asamblea General está conformada por:</p>
+                <p class="intro-paragraph">Somos una ONG o corporación cultural sin fines de lucro, fundada en 2023 por la poeta Norka Sepúlveda para el desarrollo de la cultura y las artes. El órgano colectivo principal de la Corporación es su Asamblea General de Socios.</p>
+                
+                <p class="asamblea-title">Nuestra Asamblea General está conformada por:</p>
                 <ul class="asamblea-members">
-                    <li><strong>Presidente Directorio y Representante Legal:</strong> Carlos Gray Aguirre</li>
-                    <li><strong>Tesorero Directorio:</strong> Armando Zapata Silva</li>
-                    <li><strong>Secretaria Directorio:</strong> Graciela Guajardo Hernández</li>
-                    <li>Maria Cristina Hurtado Guzmán</li>
-                    <li>Tomás Alejandro Billike Brancoli</li>
-                </ul>
+                    <li><strong>Presidente Directorio y Representante Legal:</strong> <span class="member-name">Carlos Gray Aguirre</span></li>
+                    <li><strong>Tesorero Directorio:</strong> <span class="member-name">Armando Zapata Silva</span></li>
+                    <li><strong>Secretaria Directorio:</strong> <span class="member-name">Graciela Guajardo Hernández</span></li>
+                    <li><span class="member-name">Maria Cristina Hurtado Guzmán</span></li> <li><span class="member-name">Tomás Alejandro Billike Brancoli</span></li> </ul>
                 <img src="assets/images/Foto 4_organigrama Antulelbun.jpg" alt="Organigrama de la Corporación Cultural Antulelbún" style="max-width: 700px;">
             </section>
 
@@ -205,14 +241,14 @@
                 <div class="team-member">
                     <h4>Director</h4>
                     <img src="assets/images/Foto 5.jpg" alt="Foto de Carlos Gray Aguirre">
-                    <p><strong>Carlos Gray Aguirre</strong><br>
+                    <p><strong>Carlos Gray Aguirre</strong>
                     Actor, Escritor y Gestor Cultural con más de 30 años de trayectoria, con xxx publicaciones y director de “La Góndola del Arte”, compañía de teatro. Entre otros, recibe el “Premio a la Trayectoria Cultural de la Araucanía” por parte de la SEREMI de las Culturas, las Artes y el Patrimonio en 2022.</p>
                 </div>
 
                 <div class="team-member">
                     <h4>Coordinadora de Estrategia y Desarrollo (Proyectos)</h4>
                     <img src="assets/images/Foto 6.jpg" alt="Foto de Natalia Navarrete Cavieres">
-                    <p><strong>Natalia Navarrete Cavieres</strong><br>
+                    <p><strong>Natalia Navarrete Cavieres</strong>
                     Administradora Pública, Magíster en Gestión Educacional, Diplomada en Gestión de Proyectos Municipales y Diplomada en Gobiernos Locales Transformadores.<br>
                     Diseñadora y Coordinadora General de uno de los 11 proyectos del mundo ganadores del Fondo Internacional para la Diversidad Cultural de UNESCO, versión 2022. Formuladora y coordinadora de diversos proyectos de asociatividad municipal en vinculación con las comunidades.</p>
                 </div>
@@ -220,7 +256,7 @@
                 <div class="team-member">
                     <h4>Coordinadora de Medios y Comunidades</h4>
                     <img src="assets/images/Foto 7.jpg" alt="Foto de Daniela Navarrete Cavieres">
-                    <p><strong>Daniela Navarrete Cavieres</strong><br>
+                    <p><strong>Daniela Navarrete Cavieres</strong>
                     Fotógrafa Profesional, Gestora Cultural, Guía Educativa y Tallerista de Técnica de Cianotipia. Creadora y colaboradora de múltiples proyectos culturales comunitarios autofinanciados.</p>
                 </div>
             </section>
