@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Proyectos Futuros - Corporación Cultural Antulelbún</title>
-    <link rel="stylesheet" href="assets/styles.css">
     <style>
-        /* Estilos generales que podrías tener en assets/styles.css */
-        body { font-family: sans-serif; margin: 0; }
-        header { background-color: #3A5F0B; /* Color verde oscuro similar al de la imagen */ color: white; padding: 15px 0; text-align: center; }
-        header h1 { margin: 0; font-size: 1.8em; }
-        header img {
-            width: 120px; /* Ajusta este valor según el tamaño deseado para tu logo PNG */
+        /* Estilos Generales Consistentes (Basados en el formato anterior) */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #3A5F0B;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header img.logo-img { /* Clase específica para el logo */
+            width: 120px;
             max-width: 100%;
             height: auto;
             display: block;
@@ -18,80 +32,95 @@
         }
 
         nav {
-            background-color: #558B2F; /* Un verde más claro para la navegación, similar al de la imagen */
+            background-color: #558B2F;
             padding: 10px 0;
             text-align: center;
-            display: flex; /* Usamos flexbox para mejor control */
-            flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
-            justify-content: center; /* Centra los elementos de navegación */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         nav a {
             color: white;
             text-decoration: none;
-            padding: 8px 12px; /* Reducimos un poco el padding respecto a un valor genérico */
-            font-size: 0.95em; /* Reducimos un poco la fuente si es necesario */
-            margin: 5px 5px; /* Espacio entre los botones */
-            border-radius: 4px; /* Bordes redondeados para los botones */
+            padding: 8px 12px;
+            font-size: 0.95em;
+            margin: 5px 5px;
+            border-radius: 4px;
             transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #3A5F0B; /* Oscurece al pasar el mouse */
+            background-color: #3A5F0B;
         }
-
+        
+        /* Estilos para el contenido principal centrado */
         main {
-            padding: 20px;
+            padding: 0px 20px 20px 20px;
         }
-        /* Estilos específicos para la página de Proyectos Futuros */
-        .proyecto-futuro {
-            background-color: #f9f9f9;
-            border: 1px solid #e0e0e0; /* Borde un poco más visible */
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 35px;
-            text-align: left;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra sutil */
-        }
-        .proyecto-futuro h3 {
-            color: #333;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 1.5em; /* Tamaño de fuente para el título del proyecto */
-        }
-        .proyecto-futuro p {
-            color: #444; /* Texto un poco más oscuro para mejor contraste */
-            line-height: 1.7; /* Interlineado mejorado */
-            margin-bottom: 12px;
-        }
-        .proyecto-futuro .detalles-proyecto strong {
-            color: #222; /* Etiquetas de detalles más oscuras */
-        }
-        .proyecto-futuro em { /* Estilo para texto en cursiva (postulaciones) */
-            color: #555;
-            display: block;
-            margin-bottom: 15px;
-            text-align: center;
-            font-style: italic;
-        }
-        .proyecto-futuro ol {
-            padding-left: 20px; /* Espaciado para listas */
-            margin-bottom: 15px;
-        }
-        .proyecto-futuro ol li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
         .main-content-centered {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
-        main > .main-content-centered > h2 { /* Título principal "Proyectos Futuros" */
+        .main-content-centered > h2 { /* Título principal de la página (Proyectos Futuros) */
+            color: #3A5F0B; 
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 2em; /* Tamaño de fuente para el título principal */
-            color: #3A5F0B; /* Color verde del header */
+            margin-top: 30px; /* Margen superior como en otros h2 */
+            margin-bottom: 40px; /* Espacio antes de que empiecen los proyectos */
+            font-size: 2em;
+        }
+         /* Estilos generales para h3 dentro de secciones de contenido si se necesita consistencia */
+        .main-content-centered .content-section h3,
+        .main-content-centered .proyecto-futuro h3 { /* Títulos de cada proyecto */
+            color: #3A5F0B; /* Verde para los títulos de proyecto */
+            text-align: center;
+            font-size: 1.7em; /* Tamaño consistente con otros h3 */
+            margin-top: 0; /* Sin margen superior si es el primer elemento de la sección */
+            margin-bottom: 20px;
+        }
+
+
+        /* Estilos para secciones de proyectos futuros (adaptado para ser como .content-section) */
+        .proyecto-futuro {
+            background-color: #ffffff; /* Fondo blanco como otras secciones de contenido */
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px; /* Margen consistente */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .proyecto-futuro p {
+            text-align: justify; 
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        .proyecto-futuro p.detalles-proyecto { /* Párrafos de detalles (Estado, Resultados, Ejecución) */
+            text-align: left; /* Alinear a la izquierda para mejor lectura de clave-valor */
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        .proyecto-futuro p.detalles-proyecto strong {
+            color: #222; 
+        }
+        .proyecto-futuro em { /* Estilo para texto en cursiva (postulaciones) */
+            color: #555;
+            display: block;
+            margin-top: 5px; /* Espacio sobre este texto */
+            margin-bottom: 15px; /* Espacio debajo de este texto */
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9em; /* Ligeramente más pequeño */
+        }
+        .proyecto-futuro ol {
+            padding-left: 30px; /* Más indentación para la lista */
+            margin-top: 5px;
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #444;
+        }
+        .proyecto-futuro ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
         }
 
         footer {
@@ -103,7 +132,7 @@
             font-size: 0.9em;
         }
         footer a {
-            color: #3A5F0B; /* Color verde para enlaces del footer */
+            color: #3A5F0B;
             text-decoration: none;
         }
         footer a:hover {
@@ -114,7 +143,7 @@
 <body>
     <header>
         <h1>Corporación Cultural Antulelbún</h1>
-        <img src="assets/images/Logo.png" alt="Logo Corporación Cultural Antulelbún">
+        <img src="assets/images/Logo.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
     </header>
 
     <nav>
