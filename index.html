@@ -1,272 +1,115 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Corporación Cultural Antulelbún - Inicio</title>
-    <link rel="stylesheet" href="assets/styles.css"> <style>
-        /* Estilos Generales Consistentes (similares a las otras páginas) */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f7f7f2;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #e8f8c1; /* Modificado: Color de fondo del logo */
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        header img.logo-img { /* Clase específica para el logo */
-            width: 350px;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-        }
+import React from 'react';
 
-        nav {
-            background-color: #eee5bf; /* Modificado: Color de barra de menú */
-            padding: 10px 0;
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        nav a {
-            color: black; /* Modificado: Letras del menú color negro */
-            text-decoration: none;
-            padding: 8px 12px;
-            font-size: 1.1em; /* Increased font size as requested */
-            font-weight: bold; /* Made bold as requested */
-            margin: 5px 5px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #e8f8c1; /* Mantenido el hover original, puedes ajustarlo si lo deseas */
-        }
+export default function App() {
+  return (
+    <div className="app">
+      {/* Header */}
+      <header className="bg-[#e8f8c1] text-white py-4 text-center">
+        <h1 className="text-2xl m-0">Corporación Cultural Antulelbún</h1>
+        <img 
+          src="assets/images/Logo_Negro.png" 
+          alt="Logo Corporación Cultural Antulelbún" 
+          className="logo-img w-[350px] max-w-full h-auto mx-auto my-2"
+        />
+      </header>
 
-        /* Hero Section - Imagen principal con eslogan */
-        .hero-section {
-            position: relative; /* Necesario para posicionar el texto del eslogan */
-            width: 100%;
-            max-height: 600px; /* Altura máxima para la hero image, ajusta según necesidad */
-            overflow: hidden; /* Para que la imagen no se desborde si es más alta */
-            text-align: center; /* Centra el texto del eslogan si es un bloque */
-            margin-bottom: 20px; /* Espacio después de la hero section */
-        }
-        .hero-section img.hero-image {
-            width: 100%;
-            height: auto; /* Mantiene la proporción */
-            display: block; /* Elimina espacio extra debajo de la imagen */
-            object-fit: cover; /* Cubre el área sin perder proporción, puede recortar */
-            max-height: 600px; /* Coincide con el max-height del contenedor */
-        }
-        .hero-slogan {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Centra el texto perfectamente */
-            color: white;
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para legibilidad */
-            padding: 20px 30px;
-            border-radius: 8px;
-            font-size: 2em; /* Tamaño del eslogan, ajusta según necesidad */
-            font-weight: bold;
-            text-align: center;
-            width: 80%; /* Evita que el texto sea demasiado ancho en pantallas grandes */
-            max-width: 700px; /* Ancho máximo para el eslogan */
-        }
-         @media (max-width: 768px) {
-            .hero-slogan {
-                font-size: 1.5em;
-                padding: 15px 20px;
-            }
-        }
-        @media (max-width: 480px) {
-            .hero-slogan {
-                font-size: 1.2em;
-                padding: 10px 15px;
-                width: 90%;
-            }
-        }
+      {/* Navigation */}
+      <nav className="bg-[#eee5bf] py-2.5 text-center flex flex-wrap justify-center">
+        <a href="index.html" className="text-black no-underline px-3 py-2 mx-1 my-1 text-lg font-bold transition-colors hover:bg-[#e8f8c1] rounded">Inicio</a>
+        <a href="quienes-somos.html" className="text-black no-underline px-3 py-2 mx-1 my-1 text-lg font-bold transition-colors hover:bg-[#e8f8c1] rounded">Quiénes Somos</a>
+        <a href="lineas-de-trabajo.html" className="text-black no-underline px-3 py-2 mx-1 my-1 text-lg font-bold transition-colors hover:bg-[#e8f8c1] rounded">Líneas de Trabajo</a>
+        <a href="proyectos-en-ejecucion.html" className="text-black no-underline px-3 py-2 mx-1 my-1 text-lg font-bold transition-colors hover:bg-[#e8f8c1] rounded">Proyectos en Ejecución</a>
+        <a href="proyectos-futuros.html" className="text-black no-underline px-3 py-2 mx-1 my-1 text-lg font-bold transition-colors hover:bg-[#e8f8c1] rounded">Proyectos Futuros</a>
+        <a href="noticias.html" className="text-black no-underline px-3 py-2 mx-1 my-1 text-lg font-bold transition-colors hover:bg-[#e8f8c1] rounded">Prensa</a>
+      </nav>
 
+      {/* Hero Section */}
+      <section className="hero-section relative w-full overflow-hidden mb-5">
+        <img 
+          src="assets/images/Foto 1.jpg" 
+          alt="Paisaje lacustre andino" 
+          className="hero-image w-full h-auto block object-cover max-h-[600px]"
+        />
+        <div className="hero-slogan absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+          text-white bg-black bg-opacity-60 p-7.5 rounded-lg text-3xl font-bold text-center w-4/5 max-w-[700px]"
+        >
+          Promoviendo la cultura y las artes en el territorio lacustre andino
+        </div>
+      </section>
 
-        .main-content-centered {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .main-content-centered h2 { /* Título de Noticias */
-            color: black; /* Changed to black as requested */
-            font-weight: bold; /* Made bold as requested */
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 25px;
-            font-size: 2em;
-        }
+      {/* Main Content */}
+      <main className="main-content-centered max-w-[900px] mx-auto p-5">
+        {/* Welcome Section */}
+        <section className="welcome-section bg-white border border-gray-300 rounded-lg p-6 mb-7.5 shadow-sm text-center">
+          <p className="text-gray-700 mb-2.5">
+            <strong className="text-xl text-gray-800">Bienvenidos a la Corporación Cultural Antulelbún.</strong>
+          </p>
+          <p className="text-gray-700 mb-0 text-lg">
+            Somos una ONG sin fines de lucro fundada en 2023 por la poeta Norka Sepúlveda, dedicada al fomento y desarrollo de la cultura y las artes.
+          </p>
+        </section>
 
-        /* Sección de Bienvenida */
-        .welcome-section {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            text-align: center; /* Centra el texto de bienvenida */
-        }
-        .welcome-section p {
-            color: #444;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        .welcome-section p strong {
-            font-size: 1.2em;
-            color: #3A5F0B;
-        }
+        {/* News Section */}
+        <section id="noticias">
+          <h2 className="text-2xl text-black font-bold text-center mt-0 mb-6">Noticias</h2>
+          
+          {/* First News Article */}
+          <div className="noticia bg-white border border-gray-300 rounded-lg p-6 mb-7.5 shadow-sm">
+            <img 
+              src="assets/images/Foto 3 y 11_Afiche.png" 
+              alt="Afiche Ruta Turística Teatralizada" 
+              className="noticia-imagen max-w-full h-auto block mx-auto my-0 mb-5 rounded-md"
+              style={{maxWidth: '400px'}}
+            />
+            <h3 className="text-xl text-gray-800 text-left mt-0 mb-4 font-normal">
+              Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025
+            </h3>
+            <p className="text-gray-700 mb-4 leading-relaxed text-justify">
+              En un esfuerzo por rescatar y difundir la historia local, la Corporación Cultural Antulelbún, en colaboración con la Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón, está organizando una experiencia inédita para el Día del Patrimonio 2025: una Ruta Turística Teatralizada titulada "Un paseo por la memoria de Pucón".
+            </p>
+            <p className="text-gray-700 mb-4 leading-relaxed text-justify">
+              El evento, previsto para domingo 25 de mayo a las 11:00 horas, ofrecerá un recorrido guiado por nueve puntos emblemáticos de la ciudad, con actuaciones que darán vida a simpáticos personajes de inicios de la fundación de la comuna para relatar pasajes contenidos en Los Archivos de la Memoria: La Historia No Contada de Pucón, obra de Carlos Gray A.
+            </p>
+            <p className="text-gray-700 mb-0 leading-relaxed text-justify">
+              Esta iniciativa no solo busca acercar la comunidad y visitantes al pasado de Pucón, sino que también promueve el acceso gratuito al conocimiento histórico y la participación activa en la conservación de la identidad cultural. Para ello, el evento contará con herramientas digitales como un código QR que permitirá acceder a un mapa interactivo con fotografías antiguas de los lugares visitados.
+            </p>
+          </div>
+          
+          {/* Second News Article with Form Button */}
+          <div className="noticia bg-white border border-gray-300 rounded-lg p-6 mb-7.5 shadow-sm">
+            <h3 className="text-xl text-gray-800 text-left mt-0 mb-4 font-bold">
+              Convocatoria abierta para el Mapeo Cultural de Pucón y Curarrehue
+            </h3>
+            <p className="text-gray-700 mb-4 leading-relaxed text-justify">
+              La Corporación Cultural Antulelbún invita a todos los agentes culturales de <strong>Pucón y Curarrehue</strong> a participar en el <strong>proceso de mapeo cultural</strong>, una iniciativa diseñada para <strong>conectar a quienes comparten una identidad territorial y fortalecer espacios de vínculo en el futuro.</strong>
+            </p>
+            <p className="text-gray-700 mb-0 leading-relaxed text-justify">
+              Este registro busca identificar y visibilizar a artistas, gestores y emprendimientos culturales de ambas comunas, con el propósito de generar redes colaborativas que impulsen el desarrollo del sector. La información recopilada permitirá estructurar futuras instancias de intercambio, capacitación y comercialización, alineadas con estrategias municipales y regionales.
+            </p>
+            
+            {/* Form Link Container */}
+            <div className="formulario-link-container text-center mt-5">
+              <p className="mb-3">Completa el formulario de inscripción aquí:</p>
+              <a 
+                href="https://forms.gle/tfdB4XvcTGo8WMPT9"  
+                target="_blank" 
+                className="inline-block bg-[#e8f8c1] text-gray-800 px-6 py-3 rounded font-bold no-underline transition-colors hover:bg-[#d4e8ac]"
+              >
+                Acceder al Formulario
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
 
-
-        /* Estilo para cada noticia */
-        .noticia {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .noticia img.noticia-imagen {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 20px auto; /* Centrada y con espacio abajo */
-            border-radius: 6px;
-        }
-        .noticia h3 { /* Título de la noticia (Noticia 1, Noticia 2) */
-            color: #333;
-            text-align: left; /* Alineado a la izquierda para el título de la noticia */
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-        .noticia p {
-            text-align: justify;
-            color: #444;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        /* Para el enlace del formulario en Noticia 2 */
-        .formulario-link-container {
-            text-align: center; /* Centra el contenido del contenedor del enlace */
-            margin-top: 20px;
-        }
-        .formulario-link-container img.formulario-imagen {
-             max-width: 100%; /* La imagen del formulario no debe ser demasiado grande */
-             height: auto;
-             border: 1px solid #ccc;
-             border-radius: 6px;
-             margin-bottom: 10px;
-        }
-        .formulario-link-container a.boton-formulario {
-            display: inline-block;
-            background-color: #e8f8c1; /* Changed to #e8f8c1 as requested */
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .formulario-link-container a.boton-formulario:hover {
-            background-color: #3A5F0B;
-        }
-
-
-        footer {
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            font-size: 0.9em;
-        }
-        footer a {
-            color: #3A5F0B;
-            text-decoration: none;
-            font-weight: bold; /* Made bold as requested */
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img src="assets/images/Logo_Negro.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
-    </header>
-
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="quienes-somos.html">Quiénes Somos</a>
-        <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
-        <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
-        <a href="proyectos-futuros.html">Proyectos Futuros</a>
-        <a href="noticias.html">Prensa</a>
-    </nav>
-
-    <main>
-        <section class="hero-section">
-            <img src="assets/images/Foto 1.jpg" alt="Paisaje lacustre andino" class="hero-image">
-            <div class="hero-slogan">
-                Promoviendo la cultura y las artes en el territorio lacustre andino
-            </div>
-        </section>
-
-        <div class="main-content-centered">
-            <section class="welcome-section">
-                <p><strong>Bienvenidos a la Corporación Cultural Antulelbún.</strong></p>
-                <p>Somos una ONG sin fines de lucro fundada en 2023 por la poeta Norka Sepúlveda, dedicada al fomento y desarrollo de la cultura y las artes.</p>
-            </section>
-
-            <section id="noticias"> <h2>Prensa</h2>
-                <div class="noticia">
-                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 400px;"> <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
-                    <p>En un esfuerzo por rescatar y difundir la historia local, la Corporación Cultural Antulelbún, en colaboración con la Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón, está organizando una experiencia inédita para el Día del Patrimonio 2025: una Ruta Turística Teatralizada titulada "Un paseo por la memoria de Pucón".</p>
-                    <p>El evento, previsto para domingo 25 de mayo a las 11:00 horas, ofrecerá un recorrido guiado por nueve puntos emblemáticos de la ciudad, con actuaciones que darán vida a simpáticos personajes de inicios de la fundación de la comuna para relatar pasajes contenidos en Los Archivos de la Memoria: La Historia No Contada de Pucón, obra de Carlos Gray A.</p>
-                    <p>Esta iniciativa no solo busca acercar la comunidad y visitantes al pasado de Pucón, sino que también promueve el acceso gratuito al conocimiento histórico y la participación activa en la conservación de la identidad cultural. Para ello, el evento contará con herramientas digitales como un código QR que permitirá acceder a un mapa interactivo con fotografías antiguas de los lugares visitados.</p>
-                    <p>El equipo de producción está conformado por tres actores y una profesional encargada del material digital, quienes, con vestuarios teatrales y elementos auditivos como megáfonos, transformarán cada parada en un episodio inmersivo de la historia local. Se espera que esta celebración del patrimonio logre consolidarse como un hito cultural que refuerce el vínculo entre la ciudad y su historia, permitiendo a los asistentes vivir el pasado a través de una experiencia innovadora y memorable. ¡Pucón se prepara para recorrer su memoria como nunca antes!</p>
-                </div>
-
-                <div class="noticia">
-                    <h3><strong>Convocatoria abierta para el Mapeo Cultural de Pucón y Curarrehue</strong></h3>
-                    <p>La Corporación Cultural Antulelbún invita a todos los agentes culturales de <strong>Pucón y Curarrehue</strong> a participar en el <strong>proceso de mapeo cultural</strong>, una iniciativa diseñada para <strong>conectar a quienes comparten una identidad territorial y fortalecer espacios de vínculo en el futuro.</strong></p>
-                    <p>Este registro busca identificar y visibilizar a artistas, gestores y emprendimientos culturales de ambas comunas, con el propósito de generar redes colaborativas que impulsen el desarrollo del sector. La información recopilada permitirá estructurar futuras instancias de intercambio, capacitación y comercialización, alineadas con estrategias municipales y regionales.</p>
-                    <p>La inscripción es <strong>gratuita y abierta</strong> a todas las personas vinculadas a la creación y gestión cultural en <strong>Pucón y Curarrehue</strong>. Para participar, los interesados deben completar el formulario disponible en las plataformas digitales de la <strong>Corporación Antulelbún</strong> o contactar a la coordinación del proyecto. Este mapeo representa un paso fundamental para el fortalecimiento del ecosistema cultural local, facilitando la articulación entre actores del territorio y asegurando la sustentabilidad del sector. ¡Seamos parte de esta iniciativa y consolidemos juntos el futuro cultural de la Araucanía Lacustre Andina!</p>
-
-                     <div class="formulario-link-container">
-                         <p>Completa el formulario de inscripción aquí:</p>
-                         <a href="https://forms.gle/tfdB4XvcTGo8WMPT9" target="_blank" class="boton-formulario">Acceder al Formulario</a>
-                     </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <p>Contacto: <a href="mailto:corporacionantulelbun@gmail.com">corporacionantulelbun@gmail.com</a></p>
-        <p>Síguenos: 
-            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> | 
-            <a href="https://www.facebook.com/profile.php?id=61557589215809" target="_blank">Facebook</a>
-        </p>
-    </footer>
-</body>
-</html>
+      {/* Footer */}
+      <footer className="bg-gray-100 text-gray-800 text-center pt-5 pb-5 mt-7.5">
+        <p>Contacto: <a href="mailto:corporacionantulelbun@gmail.com" className="text-gray-800 font-bold no-underline hover:underline">corporacionantulelbun@gmail.com</a></p>
+        <p className="mt-2">Síguenos: 
+          <a href="https://www.instagram.com/antulelbun.cultura/"  target="_blank" className="text-gray-800 font-bold no-underline hover:underline">Instagram</a> | 
+          <a href="https://www.facebook.com/profile.php?id=61557589215809" target="_blank" className="text-gray-800 font-bold no-underline hover:underline">Facebook</a>
+        </p>
+      </footer>
+    </div>
+  );
+}
