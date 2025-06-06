@@ -172,7 +172,7 @@
         }
         .formulario-link-container p { /* Added style for the paragraph inside the container */
             margin-top: 10px; /* Add a small margin to separate it from the last paragraph of the news */
-            margin-bottom: 10px; /* Keep some space above the button */
+            margin-bottom: 0px; /* Reduced margin-bottom to bring the button closer */
         }
         .formulario-link-container img.formulario-imagen {
             max-width: 100%; /* La imagen del formulario no debe ser demasiado grande */
@@ -183,13 +183,14 @@
         }
         .formulario-link-container a.boton-formulario {
             display: inline-block;
-            background-color: #e8f8c1; /* Cambiado a #e8f8c1 */
-            color: black; /* Cambiado a negro para mejor contraste */
+            background-color: #eee5bf; /* Changed button color to #eee5bf */
+            color: black; /* Changed to black for better contrast */
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
+            margin-top: -10px; /* Negative margin-top to pull the button up */
         }
         .formulario-link-container a.boton-formulario:hover {
             background-color: #d0e8a1; /* Color hover más claro */
@@ -202,7 +203,7 @@
             text-align: center;
             padding: 20px;
             margin-top: 30px;
-            font-size: 0.9em;
+            font-size: 1.1em; /* Increased font-size for footer text */
         }
         footer a {
             color: black; /* Changed link color to black */
