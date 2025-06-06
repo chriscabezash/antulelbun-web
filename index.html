@@ -167,48 +167,53 @@
 
         /* Para el enlace del formulario en Noticia 2 */
         .formulario-link-container {
-            text-align: center; /* Centra el contenido del contenedor del enlace */
-            margin-top: 0px; /* Reduced margin-top to bring it closer to the preceding paragraph */
+            text-align: center;
+            margin-top: 20px; /* Adjust as needed */
+            display: flex; /* Use flexbox to align items on the same line */
+            justify-content: center; /* Center the items horizontally */
+            align-items: center; /* Vertically align items in the middle */
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            gap: 10px; /* Space between the text and the button */
         }
-        .formulario-link-container p { /* Added style for the paragraph inside the container */
-            margin-top: 10px; /* Add a small margin to separate it from the last paragraph of the news */
-            margin-bottom: 0px; /* Reduced margin-bottom to bring the button closer */
+        .formulario-link-container p {
+            margin: 0; /* Remove default paragraph margins to avoid extra space */
+            white-space: nowrap; /* Keep the text "Completa el formulario de inscripción aquí:" on one line */
         }
         .formulario-link-container img.formulario-imagen {
-            max-width: 100%; /* La imagen del formulario no debe ser demasiado grande */
+            max-width: 100%;
             height: auto;
             border: 1px solid #ccc;
             border-radius: 6px;
-            margin-bottom: 10px;
+            margin-bottom: 10px; /* Keep if needed for images, but for this specific text/button combo, it might not apply */
         }
         .formulario-link-container a.boton-formulario {
             display: inline-block;
-            background-color: #eee5bf; /* Changed button color to #eee5bf */
-            color: black; /* Changed to black for better contrast */
+            background-color: #eee5bf;
+            color: black;
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
-            margin-top: -10px; /* Negative margin-top to pull the button up */
+            /* Removed margin-top negative as flexbox handles alignment */
         }
         .formulario-link-container a.boton-formulario:hover {
-            background-color: #d0e8a1; /* Color hover más claro */
+            background-color: #d0e8a1;
         }
 
 
         footer {
-            background-color: #e8f8c1; /* Changed to match header background color */
-            color: #333; /* Text color remains, consider if it needs to be darker for contrast */
+            background-color: #e8f8c1;
+            color: #333;
             text-align: center;
             padding: 20px;
             margin-top: 30px;
             font-size: 1.1em; /* Increased font-size for footer text */
         }
         footer a {
-            color: black; /* Changed link color to black */
+            color: black;
             text-decoration: none;
-            font-weight: bold; /* Negrita para links de contacto */
+            font-weight: bold;
         }
         footer a:hover {
             text-decoration: underline;
@@ -222,7 +227,7 @@
 
     <nav>
         <a href="index.html">Inicio</a>
-        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="quienes-omos.html">Quiénes Somos</a>
         <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
         <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
         <a href="proyectos-futuros.html">Proyectos Futuros</a>
