@@ -166,24 +166,18 @@
 
         /* Para el enlace del formulario en Noticia 2 */
         .formulario-link-container {
-            text-align: center;
-            margin-top: 20px; /* Adjust as needed */
-            display: flex; /* Use flexbox to align items on the same line */
-            justify-content: left; /* Center the items horizontally */
-            align-items: center; /* Vertically align items in the middle */
-            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-            gap: 10px; /* Space between the text and the button */
+            text-align: left; /* Alinea el contenido a la izquierda */
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            align-items: center; /* Alinea verticalmente los items en el medio */
+            gap: 10px; /* Espacio entre el texto y el botón */
         }
         .formulario-link-container p {
-            margin: 0; /* Remove default paragraph margins to avoid extra space */
-            white-space: nowrap; /* Keep the text "Completa el formulario de inscripción aquí:" on one line */
-        }
-        .formulario-link-container img.formulario-imagen {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            margin-bottom: 10px; /* Keep if needed for images, but for this specific text/button combo, it might not apply */
+            margin: 0;
+            /* Se añade el font-size para que coincida con el resto del texto de la noticia */
+            font-size: 1em; /* Ajusta este valor si necesitas que sea más grande o pequeño para que coincida con el p general de .noticia */
+            color: #444; /* Asegura que el color de texto sea consistente */
         }
         .formulario-link-container a.boton-formulario {
             display: inline-block;
@@ -194,7 +188,8 @@
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
-            /* Removed margin-top negative as flexbox handles alignment */
+            /* Ajustado el font-size para que el botón también sea consistente */
+            font-size: 1em; /* Ajusta este valor para que coincida con el texto del párrafo si es necesario */
         }
         .formulario-link-container a.boton-formulario:hover {
             background-color: #d0e8a1;
