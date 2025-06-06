@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Corporación Cultural Antulelbún - Inicio</title>
-    <link rel="stylesheet" href="assets/styles.css"> <style>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
         /* Estilos Generales Consistentes (similares a las otras páginas) */
         body {
             font-family: 'Montserrat', sans-serif;
@@ -84,7 +85,7 @@
             width: 80%; /* Evita que el texto sea demasiado ancho en pantallas grandes */
             max-width: 700px; /* Ancho máximo para el eslogan */
         }
-         @media (max-width: 768px) {
+        @media (max-width: 768px) {
             .hero-slogan {
                 font-size: 1.5em;
                 padding: 15px 20px;
@@ -167,14 +168,18 @@
         /* Para el enlace del formulario en Noticia 2 */
         .formulario-link-container {
             text-align: center; /* Centra el contenido del contenedor del enlace */
-            margin-top: 20px;
+            margin-top: 0px; /* Reduced margin-top to bring it closer to the preceding paragraph */
+        }
+        .formulario-link-container p { /* Added style for the paragraph inside the container */
+            margin-top: 10px; /* Add a small margin to separate it from the last paragraph of the news */
+            margin-bottom: 10px; /* Keep some space above the button */
         }
         .formulario-link-container img.formulario-imagen {
-             max-width: 100%; /* La imagen del formulario no debe ser demasiado grande */
-             height: auto;
-             border: 1px solid #ccc;
-             border-radius: 6px;
-             margin-bottom: 10px;
+            max-width: 100%; /* La imagen del formulario no debe ser demasiado grande */
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 10px;
         }
         .formulario-link-container a.boton-formulario {
             display: inline-block;
@@ -237,9 +242,11 @@
                 <p>Somos una ONG sin fines de lucro fundada en 2023 por la poeta Norka Sepúlveda, dedicada al fomento y desarrollo de la cultura y las artes.</p>
             </section>
 
-            <section id="noticias"> <h2>Prensa</h2>
+            <section id="noticias">
+                <h2>Prensa</h2>
                 <div class="noticia">
-                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 400px;"> <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
+                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 850px;">
+                    <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
                     <p>En un esfuerzo por rescatar y difundir la historia local, la Corporación Cultural Antulelbún, en colaboración con la Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón, está organizando una experiencia inédita para el Día del Patrimonio 2025: una Ruta Turística Teatralizada titulada "Un paseo por la memoria de Pucón".</p>
                     <p>El evento, previsto para domingo 25 de mayo a las 11:00 horas, ofrecerá un recorrido guiado por nueve puntos emblemáticos de la ciudad, con actuaciones que darán vida a simpáticos personajes de inicios de la fundación de la comuna para relatar pasajes contenidos en Los Archivos de la Memoria: La Historia No Contada de Pucón, obra de Carlos Gray A.</p>
                     <p>Esta iniciativa no solo busca acercar la comunidad y visitantes al pasado de Pucón, sino que también promueve el acceso gratuito al conocimiento histórico y la participación activa en la conservación de la identidad cultural. Para ello, el evento contará con herramientas digitales como un código QR que permitirá acceder a un mapa interactivo con fotografías antiguas de los lugares visitados.</p>
@@ -252,10 +259,10 @@
                     <p>Este registro busca identificar y visibilizar a artistas, gestores y emprendimientos culturales de ambas comunas, con el propósito de generar redes colaborativas que impulsen el desarrollo del sector. La información recopilada permitirá estructurar futuras instancias de intercambio, capacitación y comercialización, alineadas con estrategias municipales y regionales.</p>
                     <p>La inscripción es <strong>gratuita y abierta</strong> a todas las personas vinculadas a la creación y gestión cultural en <strong>Pucón y Curarrehue</strong>. Para participar, los interesados deben completar el formulario disponible en las plataformas digitales de la <strong>Corporación Antulelbún</strong> o contactar a la coordinación del proyecto. Este mapeo representa un paso fundamental para el fortalecimiento del ecosistema cultural local, facilitando la articulación entre actores del territorio y asegurando la sustentabilidad del sector. ¡Seamos parte de esta iniciativa y consolidemos juntos el futuro cultural de la Araucanía Lacustre Andina!</p>
 
-                     <div class="formulario-link-container">
-                         <p>Completa el formulario de inscripción aquí:</p>
-                         <a href="https://forms.gle/tfdB4XvcTGo8WMPT9" target="_blank" class="boton-formulario">Acceder al Formulario</a>
-                     </div>
+                    <div class="formulario-link-container">
+                        <p>Completa el formulario de inscripción aquí:</p>
+                        <a href="https://forms.gle/tfdB4XvcTGo8WMPT9" target="_blank" class="boton-formulario">Acceder al Formulario</a>
+                    </div>
                 </div>
             </section>
         </div>
@@ -263,8 +270,8 @@
 
     <footer>
         <p>Contacto: <a href="mailto:corporacionantulelbun@gmail.com">corporacionantulelbun@gmail.com</a></p>
-        <p>Síguenos: 
-            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> | 
+        <p>Síguenos: 
+            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> | 
             <a href="https://www.facebook.com/profile.php?id=61557589215809" target="_blank">Facebook</a>
         </p>
     </footer>
