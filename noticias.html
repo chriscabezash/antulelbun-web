@@ -130,8 +130,29 @@
             text-decoration: underline;
         }
 
+        /* Estilos para el video incrustado de YouTube */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px; /* Espacio antes del video */
+            margin-bottom: 20px; /* Espacio después del video */
+            border-radius: 6px; /* Para que coincida con el border-radius de las imágenes */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra para que se vea como las noticias */
+        }
 
-        /* Para el enlace del formulario en Noticia 2 - APLICADO EL ESTILO DE INDEX.HTML */
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+
+        /* Para el enlace del formulario en Noticia 2 */
         .formulario-link-container {
             text-align: left; /* Alinea el contenido a la izquierda */
             margin-top: 20px;
@@ -142,7 +163,6 @@
         }
         .formulario-link-container p {
             margin: 0;
-            /* Se añade el font-size para que coincida con el resto del texto de la noticia */
             font-size: 1em; /* Ajusta este valor si necesitas que sea más grande o pequeño para que coincida con el p general de .noticia */
             color: #444; /* Asegura que el color de texto sea consistente */
         }
@@ -155,7 +175,6 @@
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
-            /* Ajustado el font-size para que el botón también sea consistente */
             font-size: 1em; /* Ajusta este valor para que coincida con el texto del párrafo si es necesario */
         }
         .formulario-link-container a.boton-formulario:hover {
@@ -217,8 +236,12 @@
                         <li>
                             <strong>3. Pucón TV</strong>
                             <a href="https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio" target="_blank">https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio</a>
-                            <a href="https://www.youtube.com/watch?v=ym5wP6OlaZY&ab_channel=Puc%C3%B3nTV" target="_blank">https://www.youtube.com/watch?v=ym5WP6OlaZY</a>
-                        </li>
+                            </li>
+                    </ul>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/watch?v=ym5wP6OlaZY" title="Pucón TV Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <ul>
                         <li>
                             <strong>4. El Diario de la Araucanía</strong>
                             <a href="https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/" target="_blank">https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/</a>
