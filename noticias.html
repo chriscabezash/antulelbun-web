@@ -131,30 +131,35 @@
         }
 
 
-        /* Para el enlace del formulario en Noticia 2 */
+        /* Para el enlace del formulario en Noticia 2 - APLICADO EL ESTILO DE INDEX.HTML */
         .formulario-link-container {
-            text-align: center;
+            text-align: left; /* Alinea el contenido a la izquierda */
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            align-items: center; /* Alinea verticalmente los items en el medio */
+            gap: 10px; /* Espacio entre el texto y el botón */
         }
-        .formulario-link-container img.formulario-imagen {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            margin-bottom: 10px;
+        .formulario-link-container p {
+            margin: 0;
+            /* Se añade el font-size para que coincida con el resto del texto de la noticia */
+            font-size: 1em; /* Ajusta este valor si necesitas que sea más grande o pequeño para que coincida con el p general de .noticia */
+            color: #444; /* Asegura que el color de texto sea consistente */
         }
         .formulario-link-container a.boton-formulario {
             display: inline-block;
-            background-color: #558B2F; /* Color de botón (igual que en index) */
-            color: white;
+            background-color: #eee5bf; /* Color de botón (igual que en index) */
+            color: black; /* Texto del botón negro (igual que en index) */
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
+            /* Ajustado el font-size para que el botón también sea consistente */
+            font-size: 1em; /* Ajusta este valor para que coincida con el texto del párrafo si es necesario */
         }
         .formulario-link-container a.boton-formulario:hover {
-            background-color: #3A5F0B; /* Color de hover de botón (igual que en index) */
+            background-color: #d0e8a1; /* Color de hover de botón (igual que en index) */
         }
 
         footer {
