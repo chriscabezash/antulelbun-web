@@ -1,271 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Prensa - Corporación Cultural Antulelbún</title>
-    <style>
-        /* Estilos Generales Consistentes (tomados de la página index.html) */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f7f7f2; /* Color de fondo general */
-            color: #333; /* Color de texto principal */
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #e8f8c1; /* Fondo del header (igual que en index) */
-            color: white; /* Color de texto del header */
-            padding: 15px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-            /* Si deseas que el h1 no sea visible cuando hay un logo, puedes usar: */
-            display: none; /* Oculta el h1 para que solo se vea el logo */
-        }
-        header img.logo-img { /* Clase específica para el logo */
-            width: 350px; /* Ancho del logo, ajustado al de index */
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-        }
+    <meta charset="UTF-8">
+    <title>Prensa - Corporación Cultural Antulelbún</title>
+    <style>
+        /* Estilos Generales Consistentes (tomados de la página index.html) */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f2; /* Color de fondo general */
+            color: #333; /* Color de texto principal */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #e8f8c1; /* Fondo del header (igual que en index) */
+            color: white; /* Color de texto del header */
+            padding: 15px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            /* Si deseas que el h1 no sea visible cuando hay un logo, puedes usar: */
+            display: none; /* Oculta el h1 para que solo se vea el logo */
+        }
+        header img.logo-img { /* Clase específica para el logo */
+            width: 350px; /* Ancho del logo, ajustado al de index */
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
 
-        nav {
-            background-color: #eee5bf; /* Fondo de la barra de navegación (igual que en index) */
-            padding: 10px 0;
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        nav a {
-            color: black; /* Color del texto de los enlaces de navegación (igual que en index) */
-            text-decoration: none;
-            padding: 8px 12px;
-            font-size: 1.1em; /* Consistente con otras páginas */
-            margin: 5px 5px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-            font-weight: bold; /* Consistente con otras páginas */
-        }
-        nav a:hover {
-            background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index) */
-        }
+        nav {
+            background-color: #eee5bf; /* Fondo de la barra de navegación (igual que en index) */
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            color: black; /* Color del texto de los enlaces de navegación (igual que en index) */
+            text-decoration: none;
+            padding: 8px 12px;
+            font-size: 1.1em; /* Consistente con otras páginas */
+            margin: 5px 5px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: bold; /* Consistente con otras páginas */
+        }
+        nav a:hover {
+            background-color: #e8f8c1; /* Color de hover de los enlaces de navegación (igual que en index) */
+        }
 
-        .main-content-centered {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .main-content-centered h2 { /* Título de Noticias */
-            color: #000000; /* Cambiado a negro para consistencia */
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 25px;
-            font-size: 2em;
-            font-weight: bold; /* Añadido para consistencia */
-        }
+        .main-content-centered {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .main-content-centered h2 { /* Título de Noticias */
+            color: #000000; /* Cambiado a negro para consistencia */
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            font-size: 2em;
+            font-weight: bold; /* Añadido para consistencia */
+        }
 
-        /* Estilo para el párrafo introductorio de prensa */
-        .introduccion-prensa {
-            text-align: justify;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-            color: #555;
-        }
+        /* Estilo para el párrafo introductorio de prensa */
+        .introduccion-prensa {
+            text-align: justify;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            color: #555;
+        }
 
-        /* Estilo para cada noticia */
-        .noticia {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .noticia img.noticia-imagen {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 20px auto;
-            border-radius: 6px;
-        }
-        .noticia h3 { /* Título de la noticia */
-            color: #000000; /* Cambiado a negro para consistencia */
-            text-align: left;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            font-weight: bold; /* Añadido para consistencia */
-        }
-        .noticia p {
-            text-align: justify;
-            color: #444;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-        .noticia ul { /* Estilo para la lista de enlaces de prensa */
-            list-style: none; /* Eliminar viñetas */
-            padding: 0;
-            margin-top: 20px;
-        }
-        .noticia ul li {
-            margin-bottom: 10px;
-        }
-        .noticia ul li strong {
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-            font-size: 1.1em;
-        }
-        .noticia ul li a {
-            color: #3A5F0B; /* Color de enlace consistente */
-            text-decoration: none;
-            word-wrap: break-word; /* Para URLs largas */
-        }
-        .noticia ul li a:hover {
-            text-decoration: underline;
-        }
+        /* Estilo para cada noticia */
+        .noticia {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .noticia img.noticia-imagen {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto;
+            border-radius: 6px;
+        }
+        .noticia h3 { /* Título de la noticia */
+            color: #000000; /* Cambiado a negro para consistencia */
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            font-weight: bold; /* Añadido para consistencia */
+        }
+        .noticia p {
+            text-align: justify;
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        .noticia ul { /* Estilo para la lista de enlaces de prensa */
+            list-style: none; /* Eliminar viñetas */
+            padding: 0;
+            margin-top: 20px;
+        }
+        .noticia ul li {
+            margin-bottom: 10px;
+        }
+        .noticia ul li strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .noticia ul li a {
+            color: #3A5F0B; /* Color de enlace consistente */
+            text-decoration: none;
+            word-wrap: break-word; /* Para URLs largas */
+        }
+        .noticia ul li a:hover {
+            text-decoration: underline;
+        }
 
-        /* Estilos para el video incrustado de YouTube */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-            height: 0;
-            overflow: hidden;
-            margin-top: 20px; /* Espacio antes del video */
-            margin-bottom: 20px; /* Espacio después del video */
-            border-radius: 6px; /* Para que coincida con el border-radius de las imágenes */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra para que se vea como las noticias */
-        }
+        /* Estilos para el video incrustado de YouTube */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px; /* Espacio antes del video */
+            margin-bottom: 20px; /* Espacio después del video */
+            border-radius: 6px; /* Para que coincida con el border-radius de las imágenes */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra para que se vea como las noticias */
+        }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
 
-        /* Para el enlace del formulario en Noticia 2 */
-        .formulario-link-container {
-            text-align: left; /* Alinea el contenido a la izquierda */
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-            align-items: center; /* Alinea verticalmente los items en el medio */
-            gap: 10px; /* Espacio entre el texto y el botón */
-        }
-        .formulario-link-container p {
-            margin: 0;
-            font-size: 1em; /* Ajusta este valor si necesitas que sea más grande o pequeño para que coincida con el p general de .noticia */
-            color: #444; /* Asegura que el color de texto sea consistente */
-        }
-        .formulario-link-container a.boton-formulario {
-            display: inline-block;
-            background-color: #eee5bf; /* Color de botón (igual que en index) */
-            color: black; /* Texto del botón negro (igual que en index) */
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            font-size: 1em; /* Ajusta este valor para que coincida con el texto del párrafo si es necesario */
-        }
-        .formulario-link-container a.boton-formulario:hover {
-            background-color: #d0e8a1; /* Color de hover de botón (igual que en index) */
-        }
+        /* Para el enlace del formulario en Noticia 2 */
+        .formulario-link-container {
+            text-align: left; /* Alinea el contenido a la izquierda */
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            align-items: center; /* Alinea verticalmente los items en el medio */
+            gap: 10px; /* Espacio entre el texto y el botón */
+        }
+        .formulario-link-container p {
+            margin: 0;
+            font-size: 1em; /* Ajusta este valor si necesitas que sea más grande o pequeño para que coincida con el p general de .noticia */
+            color: #444; /* Asegura que el color de texto sea consistente */
+        }
+        .formulario-link-container a.boton-formulario {
+            display: inline-block;
+            background-color: #eee5bf; /* Color de botón (igual que en index) */
+            color: black; /* Texto del botón negro (igual que en index) */
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            font-size: 1em; /* Ajusta este valor para que coincida con el texto del párrafo si es necesario */
+        }
+        .formulario-link-container a.boton-formulario:hover {
+            background-color: #d0e8a1; /* Color de hover de botón (igual que en index) */
+        }
 
-        footer {
-            background-color: #e8f8c1; /* Fondo del footer (igual que en index y quienes-somos) */
-            color: #333; /* Color de texto del footer (igual que en index y quienes-somos) */
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            font-size: 1.1em; /* Consistente con otras páginas */
-        }
-        footer a {
-            color: black; /* Cambiado a negro para ser consistente */
-            text-decoration: none;
-            font-weight: bold; /* Consistente con otras páginas */
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+        footer {
+            background-color: #e8f8c1; /* Fondo del footer (igual que en index y quienes-somos) */
+            color: #333; /* Color de texto del footer (igual que en index y quienes-somos) */
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 1.1em; /* Consistente con otras páginas */
+        }
+        footer a {
+            color: black; /* Cambiado a negro para ser consistente */
+            text-decoration: none;
+            font-weight: bold; /* Consistente con otras páginas */
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="assets/images/Logo_Negro.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
-    </header>
+    <header>
+        <img src="assets/images/Logo_Negro.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
+    </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="quienes-somos.html">Quiénes Somos</a>
-        <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
-        <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
-        <a href="proyectos-futuros.html">Proyectos Futuros</a>
-        <a href="noticias.html">Prensa</a>
-    </nav>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
+        <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
+        <a href="proyectos-futuros.html">Proyectos Futuros</a>
+        <a href="noticias.html">Prensa</a>
+    </nav>
 
-    <main>
-        <div class="main-content-centered">
-            <section id="prensa">
-                <h2>Prensa</h2>
-                
-                <div class="noticia">
-                    <p class="introduccion-prensa">Notas de prensa sobre el recorrido patrimonial teatralizado “Un paseo por la memoria de Pucón”, realizado por la Corporación Antulelbún, Universidad de La Frontera y Municipalidad de Pucón en el Día de Los Patrimonios 2025.</p>
-                </div>
+    <main>
+        <div class="main-content-centered">
+            <section id="prensa">
+                <h2>Prensa</h2>
+                
+                <div class="noticia">
+                    <p class="introduccion-prensa">Notas de prensa sobre el recorrido patrimonial teatralizado “Un paseo por la memoria de Pucón”, realizado por la Corporación Antulelbún, Universidad de La Frontera y Municipalidad de Pucón en el Día de Los Patrimonios 2025.</p>
+                </div>
 
-                <div class="noticia">
-                    <h3>Enlaces a noticias sobre el recorrido patrimonial teatralizado:</h3>
-                    <ul>
-                        <li>
-                            <strong>1. La Voz de Pucón</strong>
-                            <a href="https://www.lavozdepucon.cl/2025/05/26/recorrido-turistico-teatralizado-marca-dia-de-los-patrimonios-un-paseo-por-la-memoria-de-pucon/" target="_blank">https://www.lavozdepucon.cl/2025/05/26/recorrido-turistico-teatralizado-marca-dia-de-los-patrimonios-un-paseo-por-la-memoria-de-pucon/</a>
-                        </li>
-                        <li>
-                            <strong>2. Municipalidad de Pucón</strong>
-                            <a href="https://municipalidadpucon.cl/?p=55178" target="_blank">https://municipalidadpucon.cl/?p=55178</a>
-                        </li>
-                        <li>
-                            <strong>3. Pucón TV</strong>
-                            <a href="https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio" target="_blank">https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio</a>
-                            </li>
-                    </ul>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/ym5wP6OlaZY?si=ZYmH0y7vLa6rOqw8" title="Pucón TV Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <ul>
-                        <li>
-                            <strong>4. El Diario de la Araucanía</strong>
-                            <a href="https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/" target="_blank">https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/</a>
-                        </li>
-                        <li>
-                            <strong>5. Prensa Ciudadana</strong>
-                            <a href="https://www.prensaciudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/" target="_blank">https://www.prensaciudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/</a>
-                        </li>
-                        <li>
-                            <strong>6. Noticias del Lago</strong>
-                            <a href="https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595" target="_blank">https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </main>
+                <div class="noticia">
+                    <h3>Enlaces a noticias sobre el recorrido patrimonial teatralizado:</h3>
+                    <ul>
+                        <li>
+                            <strong>1. La Voz de Pucón</strong>
+                            <a href="https://www.lavozdepucon.cl/2025/05/26/recorrido-turistico-teatralizado-marca-dia-de-los-patrimonios-un-paseo-por-la-memoria-de-pucon/" target="_blank">https://www.lavozdepucon.cl/2025/05/26/recorrido-turistico-teatralizado-marca-dia-de-los-patrimonios-un-paseo-por-la-memoria-de-pucon/</a>
+                        </li>
+                        <li>
+                            <strong>2. Municipalidad de Pucón</strong>
+                            <a href="https://municipalidadpucon.cl/?p=55178" target="_blank">https://municipalidadpucon.cl/?p=55178</a>
+                        </li>
+                        <li>
+                            <strong>3. Pucón TV</strong>
+                            <a href="https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio" target="_blank">https://www.pucontv.com/categoria/local/pucon-revive-historia-patrimonio</a>
+                            </li>
+                    </ul>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ym5wP6OlaZY?si=ZYmH0y7vLa6rOqw8" title="Pucón TV Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <ul>
+                        <li>
+                            <strong>4. El Diario de la Araucanía</strong>
+                            <a href="https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/" target="_blank">https://www.eldiariodelaaraucania.cl/2025/05/27/pucon-dia-del-patrimonio-teatro-historico/</a>
+                        </li>
+                        <li>
+                            <strong>5. Prensa Ciudadana</strong>
+                            <a href="https://www.prensaciudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/" target="_blank">https://www.prensaudadana.cl/2025/05/27/pucon-celebro-el-dia-del-patrimonio-con-emotiva-actividad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/56410/</a>
+                        </li>
+                        <li>
+                            <strong>6. Noticias del Lago</strong>
+                            <a href="https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595" target="_blank">https://www.noticiasdellago.cl/2025/pucon-celebr-da-del-patrimonio-con-emotiva-activi dad-teatral-que-dio-vida-a-la-historia-de-la-comuna-lacustre/052774595</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
 
-    <footer>
-        <p>Contacto: <a href="mailto:corporacionantulelbun@gmail.com">corporacionantulelbun@gmail.com</a></p>
-        <p>Síguenos:
-            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> |
-            <a href="https://www.facebook.com/profile.php?id=61557589215809" target="_blank">Facebook</a>
-        </p>
-    </footer>
+    <footer>
+        <p>Contacto: <a href="mailto:corporacionantulelbun@gmail.com">corporacionantulelbun@gmail.com</a></p>
+        <p>Síguenos:
+            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/profile.php?id=61557589215809" target="_blank">Facebook</a>
+        </p>
+    </footer>
 </body>
 </html>
