@@ -2,333 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Corporación Cultural Antulelbún - Inicio</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <title>Exitosa ruta patrimonial teatralizada en Pucón cautiva a la comunidad</title>
     <style>
-        /* Estilos Generales Consistentes (similares a las otras páginas) */
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f7f7f2;
-            color: #333;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-        }
-        header {
-            background-color: #e8f8c1; /* Modificado: Color de fondo del logo */
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-        header img.logo-img { /* Clase específica para el logo */
-            width: 350px;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-        }
-
-        nav {
-            background-color: #eee5bf; /* Modificado: Color de barra de menú */
-            padding: 10px 0;
-            text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        nav a {
-            color: black; /* Modificado: Letras del menú color negro */
-            text-decoration: none;
-            padding: 8px 12px;
-            font-size: 1.1em; /* Tamaño más grande */
-            margin: 5px 5px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-            font-weight: bold; /* Texto en negrita */
-        }
-        nav a:hover {
-            background-color: #e8f8c1; /* Mantenido el hover original, puedes ajustarlo si lo deseas */
-        }
-
-        /* Hero Section - Imagen principal con eslogan */
-        .hero-section {
-            position: relative; /* Necesario para posicionar el texto del eslogan */
-            width: 100%;
-            max-height: 600px; /* Altura máxima para la hero image, ajusta según necesidad */
-            overflow: hidden; /* Para que la imagen no se desborde si es más alta */
-            text-align: center; /* Centra el texto del eslogan si es un bloque */
-            margin-bottom: 20px; /* Espacio después de la hero section */
-        }
-        .hero-section img.hero-image {
-            width: 100%;
-            height: auto; /* Mantiene la proporción */
-            display: block; /* Elimina espacio extra debajo de la imagen */
-            object-fit: cover; /* Cubre el área sin perder proporción, puede recortar */
-            max-height: 600px; /* Coincide con el max-height del contenedor */
-        }
-        .hero-slogan {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Centra el texto perfectamente */
-            color: white;
-            background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para legibilidad */
-            border-radius: 8px;
-            font-size: 2em; /* Tamaño del eslogan, ajusta según necesidad */
-            font-weight: bold;
-            text-align: center;
-            width: 80%; /* Evita que el texto sea demasiado ancho en pantallas grandes */
-            max-width: 700px; /* Ancho máximo para el eslogan */
-        }
-        @media (max-width: 768px) {
-            .hero-slogan {
-                font-size: 1.5em;
-                padding: 15px 20px;
-            }
-        }
-        @media (max-width: 480px) {
-            .hero-slogan {
-                font-size: 1.2em;
-                padding: 10px 15px;
-                width: 90%;
-            }
-        }
-
-
-        .main-content-centered {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .main-content-centered h2 { /* Título de Noticias */
-            color: #000000; /* Cambiado a negro */
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 25px;
-            font-size: 2em;
-            font-weight: bold; /* Negrita */
-        }
-
-        /* Sección de Bienvenida */
-        .welcome-section {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            text-align: center; /* Centra el texto de bienvenida */
-        }
-        .welcome-section p {
-            color: #444;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        .welcome-section p strong {
-            font-size: 1.6em;
-            color: black;
-        }
-
-
-        /* Estilo para cada noticia */
-        .noticia {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .noticia img.noticia-imagen {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 20px auto; /* Centrada y con espacio abajo */
-            border-radius: 6px;
-        }
-        .noticia h3 { /* Título de la noticia (Noticia 1, Noticia 2) */
-            color: #000000; /* Cambiado a negro para consistencia */
-            text-align: left; /* Alineado a la izquierda para el título de la noticia */
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            font-weight: bold; /* Añadido para consistencia */
-        }
-        .noticia p {
-            text-align: justify;
-            color: #444;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-        /* Estilo para la lista de enlaces de prensa */
-        .noticia ul {
-            list-style: none; /* Eliminar viñetas */
-            padding: 0;
-            margin-top: 20px;
-        }
-        .noticia ul li {
-            margin-bottom: 10px;
-        }
-        .noticia ul li strong {
-            display: block;
-            margin-bottom: 5px;
+            margin: 20px;
             color: #333;
-            font-size: 1.1em;
         }
-        .noticia ul li a {
-            color: #3A5F0B; /* Color de enlace consistente */
-            text-decoration: none;
-            word-wrap: break-word; /* Para URLs largas */
-        }
-        .noticia ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Estilos para el video incrustado de YouTube */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-            height: 0;
-            overflow: hidden;
-            margin-top: 20px; /* Espacio antes del video */
-            margin-bottom: 20px; /* Espacio después del video */
-            border-radius: 6px; /* Para que coincida con el border-radius de las imágenes */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra para que se vea como las noticias */
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-
-        /* Para el enlace del formulario en Noticia 2 */
-        .formulario-link-container {
-            text-align: left; /* Alinea el contenido a la izquierda */
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-            align-items: center; /* Alinea verticalmente los items en el medio */
-            gap: 10px; /* Espacio entre el texto y el botón */
-        }
-        .formulario-link-container p {
-            margin: 0;
-            /* Se añade el font-size para que coincida con el resto del texto de la noticia */
-            font-size: 1em; /* Ajusta este valor si necesitas que sea más grande o pequeño para que coincida con el p general de .noticia */
-            color: #444; /* Asegura que el color de texto sea consistente */
-        }
-        .formulario-link-container a.boton-formulario {
-            display: inline-block;
-            background-color: #eee5bf;
-            color: black;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            /* Ajustado el font-size para que el botón también sea consistente */
-            font-size: 1em; /* Ajusta este valor para que coincida con el texto del párrafo si es necesario */
-        }
-        .formulario-link-container a.boton-formulario:hover {
-            background-color: #d0e8a1;
-        }
-
-
-        footer {
-            background-color: #e8f8c1;
-            color: #333;
+        h1 {
             text-align: center;
+            color: #2c3e50;
+            text-transform: capitalize; /* Para asegurar que solo la primera letra del título sea mayúscula */
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background: #f9f9f9;
             padding: 20px;
-            margin-top: 30px;
-            font-size: 1.1em; /* Increased font-size for footer text */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        footer a {
-            color: black;
-            text-decoration: none;
+        p {
+            margin-bottom: 1em;
+        }
+        strong {
             font-weight: bold;
-        }
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="assets/images/Logo_Negro.png" alt="Logo Corporación Cultural Antulelbún" class="logo-img">
-    </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="quienes-somos.html">Quiénes Somos</a>
-        <a href="lineas-de-trabajo.html">Líneas de Trabajo</a>
-        <a href="proyectos-en-ejecucion.html">Proyectos en Ejecución</a>
-        <a href="proyectos-futuros.html">Proyectos Futuros</a>
-        <a href="noticias.html">Prensa</a>
-    </nav>
+    <div class="content">
+        <h1>Exitosa ruta patrimonial teatralizada en Pucón cautiva a la comunidad</h1>
 
-    <main>
-        <section class="hero-section">
-            <img src="assets/images/Foto 1.jpg" alt="Paisaje lacustre andino" class="hero-image">
-            <div class="hero-slogan">
-                Promoviendo la cultura y las artes en el territorio lacustre andino
-            </div>
-        </section>
+        <p>La **Ruta Patrimonial Teatralizada "Un paseo por la memoria de Pucón"** se desarrolló con gran éxito el pasado domingo 25 de mayo, adaptándose a las inclemencias climáticas en un formato indoor en el **Campus Pucón de la Universidad de La Frontera**. Cerca de **100 asistentes** disfrutaron de una experiencia inmersiva que, a través de personajes históricos ficticios, permitió revivir momentos clave de la historia local contenida en **Los Archivos de la Memoria: La Historia No Contada de Pucón**, obra de **Carlos Gray A.**</p>
 
-        <div class="main-content-centered">
-            <section class="welcome-section">
-                <p><strong>Bienvenidos a la Corporación Cultural Antulelbún.</strong></p>
-                <p>Somos una ONG sin fines de lucro fundada en 2023 por la poeta Norka Sepúlveda, dedicada al fomento y desarrollo de la cultura y las artes.</p>
-            </section>
+        <p>El evento, organizado por la **Corporación Cultural Antulelbún** con colaboración de la **Municipalidad de Pucón** y la **Universidad de La Frontera, Campus Pucón**, sorprendió y fascinó al público, que elogió la puesta en escena y la adaptación del recorrido a un espacio cerrado. Actores con vestuario teatral y elementos audiovisuales transformaron la jornada en un relato vivo y dinámico, fortaleciendo el vínculo de la comunidad con su identidad cultural.</p>
 
-            <section id="prensa">
-                <h2>Prensa</h2>
-                <div class="noticia">
-                    <h3>ÉXITOSA RUTA PATRIMONIAL TEATRALIZADA EN PUCÓN CAUTIVA A LA COMUNIDAD</h3>
-                    <p>La **Ruta Patrimonial Teatralizada "Un paseo por la memoria de Pucón"** se desarrolló con gran éxito el pasado domingo 25 de mayo, adaptándose a las inclemencias climáticas en un formato indoor en el **Campus Pucón de la Universidad de La Frontera**. Cerca de **100 asistentes** disfrutaron de una experiencia inmersiva que, a través de personajes históricos ficticios, permitió revivir momentos clave de la historia local contenida en **Los Archivos de la Memoria: La Historia No Contada de Pucón, obra de Carlos Gray A.**</p>
-                    <p>El evento, organizado por la **Corporación Cultural Antulelbún** con colaboración de la **Municipalidad de Pucón** y la **Universidad de La Frontera, Campus Pucón**, sorprendió y fascinó al público, que elogió la puesta en escena y la adaptación del recorrido a un espacio cerrado. Actores con vestuario teatral y elementos audiovisuales transformaron la jornada en un relato vivo y dinámico, fortaleciendo el vínculo de la comunidad con su identidad cultural.</p>
-                    <p>Esta actividad formó parte del catálogo de actividades de celebración del Día de los Patrimonios 2025, a nivel nacional, del Ministerio de las Culturas, las Artes y el Patrimonio.</p>
-                    <p>La exitosa realización de esta iniciativa demuestra el compromiso de Pucón con la promoción y preservación de su patrimonio, consolidando a la ONG **Corporación Cultural Antulelbún** como un agente cultural líder de una experiencia innovadora que acerca a las personas a su historia de manera creativa y participativa.</p>
-                    <p>Revisa las imágenes del evento acá:</p>
-                </div>
+        <p>Esta actividad formó parte del catálogo de actividades de celebración del Día de los Patrimonios 2025, a nivel nacional, del Ministerio de las Culturas, las Artes y el Patrimonio.</p>
 
-                <div class="noticia">
-                    <img src="assets/images/Foto 3 y 11_Afiche.png" alt="Afiche Ruta Turística Teatralizada" class="noticia-imagen" style="max-width: 850px;">
-                    <h3>Pucón se prepara para una inmersiva Ruta Turística Teatralizada en el Día del Patrimonio 2025</h3>
-                    <p>En un esfuerzo por rescatar y difundir la historia local, la Corporación Cultural Antulelbún, en colaboración con la Municipalidad de Pucón y la Universidad de La Frontera, Campus Pucón, está organizando una experiencia inédita para el Día del Patrimonio 2025: una Ruta Turística Teatralizada titulada "Un paseo por la memoria de Pucón".</p>
-                    <p>El evento, previsto para domingo 25 de mayo a las 11:00 horas, ofrecerá un recorrido guiado por nueve puntos emblemáticos de la ciudad, con actuaciones que darán vida a simpáticos personajes de inicios de la fundación de la comuna para relatar pasajes contenidos en Los Archivos de la Memoria: La Historia No Contada de Pucón, obra de Carlos Gray A.</p>
-                    <p>Esta iniciativa no solo busca acercar la comunidad y visitantes al pasado de Pucón, sino que también promueve el acceso gratuito al conocimiento histórico y la participación activa en la conservación de la identidad cultural. Para ello, el evento contará con herramientas digitales como un código QR que permitirá acceder a un mapa interactivo con fotografías antiguas de los lugares visitados.</p>
-                    <p>El equipo de producción está conformado por tres actores y una profesional encargada del material digital, quienes, con vestuarios teatrales y elementos auditivos como megáfonos, transformarán cada parada en un episodio inmersivo de la historia local. Se espera que esta celebración del patrimonio logre consolidarse como un hito cultural que refuerce el vínculo entre la ciudad y su historia, permitiendo a los asistentes vivir el pasado a través de una experiencia innovadora y memorable. ¡Pucón se prepara para recorrer su memoria como nunca antes!</p>
-                </div>
+        <p>La exitosa realización de esta iniciativa demuestra el compromiso de Pucón con la promoción y preservación de su patrimonio, consolidando a la ONG **Corporación Cultural Antulelbún** como un agente cultural líder de una experiencia innovadora que acerca a las personas a su historia de manera creativa y participativa.</p>
 
-                <div class="noticia">
-                    <h3><strong>Convocatoria abierta para el Mapeo Cultural de Pucón y Curarrehue</strong></h3>
-                    <p>La Corporación Cultural Antulelbún invita a todos los agentes culturales de <strong>Pucón y Curarrehue</strong> a participar en el <strong>proceso de mapeo cultural</strong>, una iniciativa diseñada para <strong>conectar a quienes comparten una identidad territorial y fortalecer espacios de vínculo en el futuro.</strong></p>
-                    <p>Este registro busca identificar y visibilizar a artistas, gestores y emprendimientos culturales de ambas comunas, con el propósito de generar redes colaborativas que impulsen el desarrollo del sector. La información recopilada permitirá estructurar futuras instancias de intercambio, capacitación y comercialización, alineadas con estrategias municipales y regionales.</p>
-                    <p>La inscripción es <strong>gratuita y abierta</strong> a todas las personas vinculadas a la creación y gestión cultural en <strong>Pucón y Curarrehue</strong>. Para participar, los interesados deben completar el formulario disponible en las plataformas digitales de la <strong>Corporación Antulelbún</strong> o contactar a la coordinación del proyecto. Este mapeo representa un paso fundamental para el fortalecimiento del ecosistema cultural local, facilitando la articulación entre actores del territorio y asegurando la sustentabilidad del sector. ¡Seamos parte de esta iniciativa y consolidemos juntos el futuro cultural de la Araucanía Lacustre Andina!</p>
+        <p>Revisa las imágenes del evento acá:</p>
+        <p>(poner galería de fotos)</p>
+    </div>
 
-                    <div class="formulario-link-container">
-                        <p>Completa el formulario de inscripción aquí:</p>
-                        <a href="https://forms.gle/tfdB4XvcTGo8WMPT9" target="_blank" class="boton-formulario">Acceder al Formulario</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <p>Contacto: <a href="mailto:corporacionantulelbun@gmail.com">corporacionantulelbun@gmail.com</a></p>
-        <p>Síguenos: 
-            <a href="https://www.instagram.com/antulelbun.cultura/" target="_blank">Instagram</a> | 
-            <a href="https://www.facebook.com/profile.php?id=61557589215809" target="_blank">Facebook</a>
-        </p>
-    </footer>
 </body>
 </html>
