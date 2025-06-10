@@ -263,6 +263,17 @@
             margin-top: 10px; /* Space between mosaic and large image */
         }
 
+        /* Estilo para el pie de foto */
+        .photo-credit {
+            font-size: 0.9em; /* Más pequeño que el texto normal */
+            color: #666; /* Un color más suave */
+            text-align: right; /* Alineado a la derecha como en la imagen */
+            margin-top: 10px; /* Espacio arriba */
+            margin-bottom: 20px; /* Espacio abajo */
+            padding-right: 20px; /* Espacio a la derecha si está dentro de main-content-centered */
+        }
+
+
         @media (max-width: 600px) {
             .gallery-container {
                 grid-template-columns: 1fr; /* Single column on smaller screens */
@@ -331,6 +342,7 @@
                         <div class="gallery-item"><img src="assets/images/Foto Actividad 4.jpeg" alt="Imagen de la actividad 4"></div>
                         <div class="gallery-item large-image"><img src="assets/images/Foto Actividad 5.jpeg" alt="Imagen de la actividad 5"></div>
                     </div>
+                    <p class="photo-credit">Fotografías: Salvador Bravo Melin.</p>
                 </div>
 
                 <div class="noticia">
